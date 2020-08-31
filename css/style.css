@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+
+/*  ========== RESET BLOCK START ========= */
+
+input {
+  border: none;
+  outline: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/*  ========== RESET BLOCK END ========= */
+
+.btn {
+  height: 50px;
+  width: auto;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.btn--add {
+  background-color: red;
+  color: white;
+}
+
+.btn--next {
+  background-color: cyan;
+}
+
+.flex__container--center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register,
+.register__header {
+  flex-direction: column;
+}
+
+.register__image {
+  height: 150px;
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.profile__image--circle {
+  border-radius: 50%;
+}
+
+.register__info {
+  margin-top: 10px;
+}
+
+.register__form {
+  flex-wrap: wrap;
+}
+
+.form--control {
+  border-bottom: 1px solid gray;
+  margin: 10px;
+}
+
+input[name="name"],
+input[name="age"] {
+  flex-grow: 1;
+}
+
+input[name="address"] {
+  flex: 0 1 100%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 900px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .profile__image {
+    height: 50px;
+    width: 50px;
+  }
+
+  .modal__map {
+    height: 200px;
+    width: 200px;
+  }
+
+  .popup {
+    width: 100%;
+  }
+}
+
+.interests {
+  display: grid;
+  grid-template-areas: "categories list";
+  grid-template-columns: 1fr 5fr;
+}
+
+.interests__list {
+  grid-area: list;
+}
+
+.interests__categories {
+  grid-area: categories;
+}
+
+.interests__form {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.interest__item {
+  display: inline-block;
+  margin: 2px;
+  flex: 0 1 calc(25% - 4px);
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+}
+
+.navbar__logo {
+  flex-grow: 1;
+}
+
+.navbar__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  display: inline-block;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.nav__item + .nav__item {
+  margin-left: 10px;
+}
+
+/*  ========== MODAL BLOCK START ========= */
+
+.button {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  padding: 5px 10px;
+  border: 1px solid #aaa;
+  background-color: #eee;
+  background-image: linear-gradient(top, #fff, #f0f0f0);
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15s);
+  color: #666;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+button:hover {
+  border-color: #999;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+button:active {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 200ms;
+  visibility: hidden;
+  opacity: 0s;
+}
+
+.light {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.overlay.cancel {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.overlay.cancel:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #666;
+  max-width: 90%;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  max-height: 90%;
+  min-width: 30%;
+  border-color: #aaa;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  margin-top: 0;
+  color: #666;
+  font-family: "Trebuchet MS", Tahoma, Arial, sans-serif;
+}
+
+.close {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  right: 20px;
+  opacity: 0.8;
+  transition: all 200ms;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #666;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+.content {
+  position: relative;
+  overflow: auto;
+  flex-grow: 1;
+}
+
+.popup p {
+  margin: 0 0 1em;
+}
+
+.popup p:last-child {
+  margin: 0;
+}
+
+/*  ========== MODAL BLOCK END ========= */
+
+.bola {
+  width: 48px;
+  height: 48px;
+}
