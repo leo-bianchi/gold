@@ -8,7 +8,7 @@
     <title>Gold</title>
   </head>
   <body>
-    <header>
+    <header class="header-background">
       <nav class="navbar">
         <div class="navbar__logo">
           <a href="#"
@@ -17,19 +17,40 @@
         </div>
         <ul class="navbar__list">
           <li class="nav__item">
-            <a href="">Perfil</a>
+            <a href="./profile.html">Perfil</a>
           </li>
           <li class="nav__item">
             <a href="">Conexões</a>
           </li>
-          <li class="nav__item">
+          <li class="nav__item" style="margin-right:1em">
             <a href="">Conectar</a>
           </li>
         </ul>
       </nav>
     </header>
-    <!--The div element for the map -->
+    
+    <div class="boxes-container">
+      <!--The div element for conectar button -->
+      <div class="conectar-box">
+        <img src="./repo/imgs/velhote01.png"/>
+        <p class="box-button" ><a href="#popup2">Conectar-me</a></p>
+      </div>
 
+       <!--The div element for minhas conexoes-->
+      <div class="conexoes-box">
+        <img src="./repo/imgs/velhoteJogando.png"/>
+        <p class="box-button" ><a href="#popup2">Minhas conexões</a></p>
+      </div>
+    </div>
+
+    <div class="regiao-proximos">
+
+    </div>
+    
+
+    
+
+     <!--The div element for the map -->
     <div id="popup2" class="overlay light flex__container--center">
       <a class="cancel" href="#"></a>
       <div class="popup">
@@ -54,6 +75,6 @@
         );
       }
     </script>
-    <p><a class="button" href="#popup2">Conectar-me</a></p>
+    
   </body>
 </html>

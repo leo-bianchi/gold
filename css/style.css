@@ -152,8 +152,10 @@ input[name="address"] {
 }
 
 .navbar {
+  margin-top:-1em;  
   align-items: center;
   display: flex;
+  position:  relative;
 }
 
 .navbar__logo {
@@ -161,13 +163,22 @@ input[name="address"] {
 }
 
 .navbar__list {
+  font-size: 1.3em;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .nav__item {
+  text-transform: uppercase;
   display: inline-block;
+  font-size: 1.2em;
+  padding-left: 6em;
+}
+
+.nav__item a{
+  text-decoration: none;
+  color:white;
 }
 
 .logo {
@@ -291,3 +302,71 @@ h2 {
   width: 48px;
   height: 48px;
 }
+
+
+.header-background{
+  display: block;
+  width: 100%;
+  height: 50%;
+  background: url(./../repo/imgs/header-background.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+/*  ========== BOXES ========= */
+.boxes-container{
+  object-fit: contain;
+  height:50%;
+  display: flex;
+}
+
+.box-button{
+  text-decoration: none;
+  float: right;
+  margin-right: 20%;
+  margin-top: 12%;
+  font-size: 2em;
+}
+
+.box-button a{
+  text-decoration: none;
+  color: black;
+}
+
+/*  ========== CONECTAR BOX ========= */
+.conectar-box{
+  background-color: white;
+  width: 35%;
+  height: 40%;
+  margin-left: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.conectar-box img{
+  float: left;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+
+/*  ========== CONEXOES BOX ========= */
+.conexoes-box{
+  background-color: white;
+  width: 35%;
+  height: 40%;
+  margin-left: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.conexoes-box img{
+  float: left;
+  height: 100%;
+  object-fit: contain;
+}
+
+.regiao-proximos{
+  height: 20%;
+}
+
+
