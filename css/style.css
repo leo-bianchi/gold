@@ -21,13 +21,14 @@ button:hover {
 *::before {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  box-sizing: border-box;
 }
 
 body {
   height: 100vh;
   overflow: hidden;
   font-size: 14px;
+  margin: 0;
+  padding: 0;
 }
 
 li {
@@ -152,10 +153,8 @@ input[name="address"] {
 }
 
 .navbar {
-  margin-top:-1em;  
   align-items: center;
   display: flex;
-  position:  relative;
 }
 
 .navbar__logo {
@@ -182,8 +181,8 @@ input[name="address"] {
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  max-width: 20%;
+  height: auto;
 }
 
 .nav__item + .nav__item {
@@ -307,10 +306,12 @@ h2 {
 .header-background{
   display: block;
   width: 100%;
-  height: 50%;
+  height: 40%;
   background: url(./../repo/imgs/header-background.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  margin-bottom: 40px;
+  
 }
 
 
@@ -323,7 +324,7 @@ h2 {
 
 .box-button{
   text-decoration: none;
-  float: right;
+  text-align: right;
   margin-right: 20%;
   margin-top: 12%;
   font-size: 2em;
@@ -342,13 +343,12 @@ h2 {
   margin-left: 10%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .conectar-box img{
   float: left;
   height: 100%;
   object-fit: contain;
 }
-
-
 
 /*  ========== CONEXOES BOX ========= */
 .conexoes-box{
