@@ -1,5 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
 
+@font-face {
+  font-family: "Bw Modelica";
+  src: url("/repo/fonts/bwmodelica/woff/BwModelica-Regular.woff") format("woff"),
+    url("/repo/fonts/bwmodelica/woff2/BwModelica-Regular.woff2") format("woff2"),
+    url("/repo/fonts/bwmodelica/otf/BwModelica-Regular.otf format")
+      format("opentype"),
+    url("/repo/fonts/bwmodelica/eot/BwModelica-Regular.eot");
+}
+
+@font-face {
+  font-family: "Bw Modelica";
+  src: url("/repo/fonts/bwmodelica/woff/BwModelica-Bold.woff") format("woff"),
+    url("/repo/fonts/bwmodelica/woff2/BwModelica-Bold.woff2") format("woff2"),
+    url("/repo/fonts/bwmodelica/otf/BwModelica-Bold.otf format")
+      format("opentype"),
+    url("/repo/fonts/bwmodelica/eot/BwModelica-Bold.eot");
+  font-weight: bold;
+}
+
 /*  ========== RESET BLOCK START ========= */
 
 input {
@@ -20,7 +39,7 @@ button:hover {
 *::after,
 *::before {
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Bw Modelica";
 }
 
 body {
@@ -40,6 +59,18 @@ ul {
   margin: 0;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 /*  ========== RESET BLOCK END ========= */
 
 .btn {
@@ -52,12 +83,30 @@ ul {
 }
 
 .btn--add {
-  background-color: red;
-  color: white;
+  background-color: #FFF;
+  color: #c1272d;
+  border: 2px solid #c1272d;
 }
 
-.btn--next {
-  background-color: cyan;
+.btn--add:hover {
+  background-color: #c1272d;
+  color: #FFF;
+  border: 2px solid #c1272d;
+}
+
+.btn--talk {
+  background-image: linear-gradient(to right, #9b0016, #c1272d);
+  color: #FFF;
+  width: 200px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+form > .btn {
+  margin-top: 28px;
 }
 
 .flex__container--center {
@@ -71,10 +120,15 @@ ul {
   flex-direction: column;
 }
 
+.register__text {
+  font-size: 28px;
+  font-weight: bold;
+}
+
 .register__image {
   height: 150px;
   width: 150px;
-  margin-bottom: 10px;
+  margin-bottom: 28px;
 }
 
 .profile__image--circle {
@@ -82,11 +136,12 @@ ul {
 }
 
 .register__info {
-  margin-top: 10px;
+  margin-top: 28px;
 }
 
 .register__form {
   flex-wrap: wrap;
+  margin-bottom: 28px;
 }
 
 .form--control {
@@ -155,6 +210,7 @@ input[name="address"] {
 .navbar {
   align-items: center;
   display: flex;
+  font-weight: bold;
 }
 
 .navbar__logo {
@@ -175,9 +231,9 @@ input[name="address"] {
   padding-left: 6em;
 }
 
-.nav__item a{
+.nav__item a {
   text-decoration: none;
-  color:white;
+  color: #FFF;
 }
 
 .logo {
@@ -302,8 +358,7 @@ h2 {
   height: 48px;
 }
 
-
-.header-background{
+.header-background {
   display: block;
   width: 100%;
   height: 40%;
@@ -311,18 +366,16 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 40px;
-  
 }
 
-
 /*  ========== BOXES ========= */
-.boxes-container{
+.boxes-container {
   object-fit: contain;
-  height:50%;
+  height: 50%;
   display: flex;
 }
 
-.box-button{
+.box-button {
   text-decoration: none;
   text-align: right;
   margin-right: 20%;
@@ -330,43 +383,41 @@ h2 {
   font-size: 2em;
 }
 
-.box-button a{
+.box-button a {
   text-decoration: none;
-  color: black;
+  color: #000;
 }
 
 /*  ========== CONECTAR BOX ========= */
-.conectar-box{
-  background-color: white;
+.conectar-box {
+  background-color: #FFF;
   width: 35%;
   height: 40%;
   margin-left: 10%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.conectar-box img{
+.conectar-box img {
   float: left;
   height: 100%;
   object-fit: contain;
 }
 
 /*  ========== CONEXOES BOX ========= */
-.conexoes-box{
-  background-color: white;
+.conexoes-box {
+  background-color: #FFF;
   width: 35%;
   height: 40%;
   margin-left: 10%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.conexoes-box img{
+.conexoes-box img {
   float: left;
   height: 100%;
   object-fit: contain;
 }
 
-.regiao-proximos{
+.regiao-proximos {
   height: 20%;
 }
-
-
