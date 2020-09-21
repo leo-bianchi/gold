@@ -1,41 +1,58 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    
-    <title>Gold</title>
-  </head>
-  <body>
-    <div class="register flex__container--center">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Gold</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/myprofile.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
+</head>
 
-      <div class="register__header flex__container--center">
-        <img
-          class="register__image profile__image--circle"
-          src="https://s2.glbimg.com/LMjRm6Nhgl_6LydlEpEA5iBaj0A=/0x0:1700x1065/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/U/v/45ceOgRBOuETa02TMmtg/joao-vara.jpg"
-          alt="Foto de Perfil do Usuário"
-        />
-        <p class="register__text">João Carlos, 75 anos </p>
-      </div>
+<body>
 
-      
-      
-      
-      <div class="register__info interests__form">
-        <p contenteditable="true">Descrição da pessoa que tem o perfil</p>
-        <div>
-          <figure>
-            <img class="interest__item" src="repo/icons/playstation.svg" />
-            <figcaption>Videogame</figcaption>
-          </figure>
-          <figure>
-            <img class="interest__item bola" src="repo/icons/soccer.svg" />
-            <figcaption>Futebol</figcaption>
-          </figure>
+
+  <header>
+    <nav class="navbar">
+        <div class="navbar__logo">
+          <a href="main.html"
+            ><img class="logo" src="./repo/imgs/principal.png" alt="Gold Logo"
+          /></a>
         </div>
-        
-      </div>
-    </div>
-  </body>
+        <ul class="navbar__list">
+          <li class="nav__item">
+            <a href="./myprofile.html">Perfil</a>
+          </li>
+          <li class="nav__item">
+            <a href="">Conexões</a>
+          </li>
+          <li class="nav__item" style="margin-right:1em">
+            <a href="">Conectar</a>
+          </li>
+        </ul>
+      </nav>
+
+    <img src="./repo/imgs/flambo.png" class="profile-image">
+    <h1 class="tag name">João Carlos, 75 anos</h1>
+    <p class="tag location">Consolação</p>
+  </header>
+
+  <main class="flex">
+    <div class="card">
+      <h2>Quem sou eu</h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel</p>
+      
+    </div> 
+
+    <div class="card">
+      <h2>Interesses</h2>
+      <ul class="skills">
+        <li>Futebol</li>
+        <li>Natação</li>
+        <li>Corrida</li>         
+      </ul>
+    </div> 
+
+  </main>
+</body>
 </html>
