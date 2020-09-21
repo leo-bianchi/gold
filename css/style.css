@@ -111,13 +111,21 @@ form > .btn {
 
 .flex__container--center {
   display: flex;
+  /*
   align-items: center;
   justify-content: center;
+  */
 }
 
-.register,
-.register__header {
-  flex-direction: column;
+.register{
+  height: 50%;
+  /*flex-direction: column;*/
+}
+
+.register__header{
+  display: inline-block;
+  margin-left: 10%;
+    margin-top: 10%;
 }
 
 .register__text {
@@ -136,7 +144,12 @@ form > .btn {
 }
 
 .register__info {
-  margin-top: 28px;
+  flex-direction: column;
+    /* align-self: center; */
+    align-items: center;
+    justify-content: center;
+    margin-left: 25%;
+    margin-top: 10%;
 }
 
 .register__form {
