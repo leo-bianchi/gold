@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -28,6 +29,75 @@
           <figcaption>Futebol</figcaption>
         </figure>
       </div>
+=======
+<html>
+<head>
+  <link href="./css/style.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<style>
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  grid-gap: 10px;
+  
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  
+
+  <nav class="site-header sticky-top py-1">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2" href="./main.html">
+      <img class="logo" src="./repo/imgs/principal.png" alt="Gold Logo" width="100" height="32"/>   
+      </a>
+      <a class="py-2 d-none d-md-inline-block"></a>
+      <a class="py-2 d-none d-md-inline-block" href="./myProfile.html">PERFIL</a>
+      <a class="py-2 d-none d-md-inline-block" href="./profile.html">CONEXÕES</a>
+      <a class="py-2 d-none d-md-inline-block" href="./interests.html">CONECTAR</a>
+>>>>>>> gbmadeira
     </div>
-  </body>
+  </nav>
+
+<div class="grid-container">
+  <div class="item1">Header</div>
+  <div class="item2">
+    <img src="./repo/imgs/flambo.png" alt="Avatar" class="avatar">
+    <br>
+    <p>JOSÉ SILVA</p>
+    <p>75 anos | SP</p>
+  </div>
+  <div class="item3">Main</div>  
+  <div class="item4">Right</div>
+  <div class="item5">
+    <a href="main.html">
+      <input class="btn btn-lg btn-primary" type="button" style = "margin:50px" value="CONECTAR"/>
+      </a>
+  </div>
+</div>
+
+</body>
 </html>

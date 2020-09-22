@@ -4,8 +4,7 @@
   font-family: "Bw Modelica";
   src: url("/repo/fonts/bwmodelica/woff/BwModelica-Regular.woff") format("woff"),
     url("/repo/fonts/bwmodelica/woff2/BwModelica-Regular.woff2") format("woff2"),
-    url("/repo/fonts/bwmodelica/otf/BwModelica-Regular.otf format")
-      format("opentype"),
+    url("/repo/fonts/bwmodelica/otf/BwModelica-Regular.otf") format("opentype"),
     url("/repo/fonts/bwmodelica/eot/BwModelica-Regular.eot");
 }
 
@@ -13,8 +12,7 @@
   font-family: "Bw Modelica";
   src: url("/repo/fonts/bwmodelica/woff/BwModelica-Bold.woff") format("woff"),
     url("/repo/fonts/bwmodelica/woff2/BwModelica-Bold.woff2") format("woff2"),
-    url("/repo/fonts/bwmodelica/otf/BwModelica-Bold.otf format")
-      format("opentype"),
+    url("/repo/fonts/bwmodelica/otf/BwModelica-Bold.otf") format("opentype"),
     url("/repo/fonts/bwmodelica/eot/BwModelica-Bold.eot");
   font-weight: bold;
 }
@@ -83,20 +81,20 @@ input[type="number"] {
 }
 
 .btn--add {
-  background-color: #FFF;
+  background-color: #fff;
   color: #c1272d;
   border: 2px solid #c1272d;
 }
 
 .btn--add:hover {
   background-color: #c1272d;
-  color: #FFF;
+  color: #fff;
   border: 2px solid #c1272d;
 }
 
 .btn--talk {
   background-image: linear-gradient(to right, #9b0016, #c1272d);
-  color: #FFF;
+  color: #fff;
   width: 200px;
   font-size: 14px;
   font-weight: bold;
@@ -117,15 +115,15 @@ form > .btn {
   */
 }
 
-.register{
+.register {
   height: 50%;
   /*flex-direction: column;*/
 }
 
-.register__header{
+.register__header {
   display: inline-block;
   margin-left: 10%;
-    margin-top: 10%;
+  margin-top: 10%;
 }
 
 .register__text {
@@ -145,11 +143,11 @@ form > .btn {
 
 .register__info {
   flex-direction: column;
-    /* align-self: center; */
-    align-items: center;
-    justify-content: center;
-    margin-left: 25%;
-    margin-top: 10%;
+  /* align-self: center; */
+  align-items: center;
+  justify-content: center;
+  margin-left: 25%;
+  margin-top: 10%;
 }
 
 .register__form {
@@ -246,7 +244,7 @@ input[name="address"] {
 
 .nav__item a {
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
 }
 
 .logo {
@@ -403,7 +401,7 @@ h2 {
 
 /*  ========== CONECTAR BOX ========= */
 .conectar-box {
-  background-color: #FFF;
+  background-color: #fff;
   width: 35%;
   height: 40%;
   margin-left: 10%;
@@ -418,7 +416,7 @@ h2 {
 
 /*  ========== CONEXOES BOX ========= */
 .conexoes-box {
-  background-color: #FFF;
+  background-color: #fff;
   width: 35%;
   height: 40%;
   margin-left: 10%;

@@ -1,58 +1,204 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Gold</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/myprofile.css">
-  <link rel="stylesheet" href="./css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
-</head>
-
-<body>
-
-
-  <header>
-    <nav class="navbar">
-        <div class="navbar__logo">
-          <a href="main.html"
-            ><img class="logo" src="./repo/imgs/principal.png" alt="Gold Logo"
-          /></a>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="site-header sticky-top py-1">
+            <div class="container d-flex flex-column flex-md-row justify-content-between">
+              <a class="py-2" href="./main.html">
+              <img class="logo" src="./repo/imgs/principal.png" alt="Gold Logo" width="100" height="32"/>   
+              </a>
+              <a class="py-2 d-none d-md-inline-block"></a>
+              <a class="py-2 d-none d-md-inline-block" href="./myProfile.html">PERFIL</a>
+              <a class="py-2 d-none d-md-inline-block" href="./profile.html">CONEXÕES</a>
+              <a class="py-2 d-none d-md-inline-block" href="./interests.html">CONECTAR</a>
+            </div>
+          </nav>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <div class="container">
+            <div class="row my-2">
+                <div class="col-lg-8 order-lg-2">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a href="" data-target="#profile" data-toggle="tab" class="nav-link active">Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" data-target="#messages" data-toggle="tab" class="nav-link">Informações de contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" data-target="#edit" data-toggle="tab" class="nav-link">Dados</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content py-4">
+                        <div class="tab-pane active" id="profile">
+                            <h5 class="mb-3">Perfil de Usuário</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>Sobre</h6>
+                                    <p>
+                                        Empresário, ativista.
+                                    </p>
+                                    <h6>Hobbies</h6>
+                                    <p>
+                                        Passeio no campo, aeromodelismo.
+                                    </p>
+                                </div>
+                                
+                                <div class="col-md-12">
+                                    <h5 class="mt-2"><span class="fa fa-clock-o ion-clock float-right"></span> Recent Activity</h5>
+                                    <table class="table table-sm table-hover table-striped">
+                                        <tbody>                                    
+                                            <tr>
+                                                <td>
+                                                    <strong>Abby</strong> joined ACME Project Team in <strong>`Collaboration`</strong>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>Gary</strong> deleted My Board1 in <strong>`Discussions`</strong>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>Kensington</strong> deleted MyBoard3 in <strong>`Discussions`</strong>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>John</strong> deleted My Board1 in <strong>`Discussions`</strong>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>Skell</strong> deleted his post Look at Why this is.. in <strong>`Discussions`</strong>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!--/row-->
+                        </div>
+                        <div class="tab-pane" id="messages">
+                            <div class="alert alert-info alert-dismissable">
+                                <a class="panel-close close" data-dismiss="alert">×</a> Um <strong>Moderador</strong> aceitou sua solicitação ao site.
+                            </div>
+                            <table class="table table-hover table-striped">
+                                <tbody>                                    
+                                    <tr>
+                                        <td>
+                                           <span class="float-right font-weight-bold">3 hrs ago</span> não sei o que escrever.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                           <span class="float-right font-weight-bold">Ontem</span> Não sei o que colocar..
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                           <span class="float-right font-weight-bold">20/09/2020</span> Falta informações para completar seu perfil. 
+                                        </td>
+                                    </tr>
+                                </tbody> 
+                            </table>
+                        </div>
+                        <div class="tab-pane" id="edit">
+                            <form role="form">
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">First name</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="text" value="Jane">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Last name</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="text" value="Bishop">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Email</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="email" value="email@gmail.com">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Company</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="text" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Address</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="text" value="" placeholder="Street">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label"></label>
+                                    <div class="col-lg-6">
+                                        <input class="form-control" type="text" value="" placeholder="City">
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <input class="form-control" type="text" value="" placeholder="State">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Time Zone</label>
+                                    <div class="col-lg-9">
+                                        <select id="user_time_zone" class="form-control" size="0">
+                                            <option value="Hawaii">(GMT-10:00) Hawaii</option>
+                                            <option value="Alaska">(GMT-09:00) Alaska</option>
+                                            <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
+                                            <option value="Arizona">(GMT-07:00) Arizona</option>
+                                            <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
+                                            <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp; Canada)</option>
+                                            <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
+                                            <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Username</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="text" value="janeuser">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Password</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="password" value="11111122333">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Confirm password</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="password" value="11111122333">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label"></label>
+                                    <div class="col-lg-9">
+                                        <input type="reset" class="btn btn-secondary" value="Cancel">
+                                        <input type="button" class="btn btn-primary" value="Save Changes">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 order-lg-1 text-center">
+                    <img src="./repo/imgs/flambo.png" class="mx-auto img-fluid img-circle d-block" alt="avatar">
+                    <h6 class="mt-2">Escolha outra foto:</h6>
+                    <label class="custom-file">
+                        <input type="file" id="file" class="custom-file-input">
+                        <span class="custom-file-control">Selecione o Arquivo</span>
+                    </label>
+                </div>
+            </div>
         </div>
-        <ul class="navbar__list">
-          <li class="nav__item">
-            <a href="./myprofile.html">Perfil</a>
-          </li>
-          <li class="nav__item">
-            <a href="">Conexões</a>
-          </li>
-          <li class="nav__item" style="margin-right:1em">
-            <a href="">Conectar</a>
-          </li>
-        </ul>
-      </nav>
-
-    <img src="./repo/imgs/flambo.png" class="profile-image">
-    <h1 class="tag name">João Carlos, 75 anos</h1>
-    <p class="tag location">Consolação</p>
-  </header>
-
-  <main class="flex">
-    <div class="card">
-      <h2>Quem sou eu</h2>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel</p>
-      
-    </div> 
-
-    <div class="card">
-      <h2>Interesses</h2>
-      <ul class="skills">
-        <li>Futebol</li>
-        <li>Natação</li>
-        <li>Corrida</li>         
-      </ul>
-    </div> 
-
-  </main>
-</body>
+    </body>
 </html>
