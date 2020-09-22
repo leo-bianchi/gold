@@ -6,8 +6,10 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script defer src="../js/script.js"></script>
   </head>
-  <body>
+  <body id="profile-page">
     <nav class="site-header sticky-top py-1">
       <div
         class="container d-flex flex-column flex-md-row justify-content-between"
@@ -62,15 +64,6 @@
               >
             </li>
             <li class="nav-item">
-              <a
-                href=""
-                data-target="#messages"
-                data-toggle="tab"
-                class="nav-link"
-                >Informações de contato</a
-              >
-            </li>
-            <li class="nav-item">
               <a href="" data-target="#edit" data-toggle="tab" class="nav-link"
                 >Dados</a
               >
@@ -84,44 +77,26 @@
                   <h6>Sobre</h6>
                   <p>Empresário, ativista.</p>
                   <h6>Hobbies</h6>
-                  <p>Passeio no campo, aeromodelismo.</p>
+                  <p>Passeio no campo, leitura e ciclismo.</p>
                 </div>
 
                 <div class="col-md-12">
                   <h5 class="mt-2">
                     <span class="fa fa-clock-o ion-clock float-right"></span>
-                    Recent Activity
+                    Atividade recente
                   </h5>
                   <table class="table table-sm table-hover table-striped">
                     <tbody>
                       <tr>
                         <td>
-                          <strong>Abby</strong> joined ACME Project Team in
-                          <strong>`Collaboration`</strong>
+                          <strong>Você</strong> se conectou a
+                          <strong>Maria Antonieta</strong>
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          <strong>Gary</strong> deleted My Board1 in
-                          <strong>`Discussions`</strong>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <strong>Kensington</strong> deleted MyBoard3 in
-                          <strong>`Discussions`</strong>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <strong>John</strong> deleted My Board1 in
-                          <strong>`Discussions`</strong>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <strong>Skell</strong> deleted his post Look at Why
-                          this is.. in <strong>`Discussions`</strong>
+                          <strong>Você</strong> enviou uma solicitação ao
+                          <strong>João Carlos</strong>
                         </td>
                       </tr>
                     </tbody>
@@ -166,23 +141,23 @@
               <form role="form">
                 <div class="form-group row">
                   <label class="col-lg-3 col-form-label form-control-label"
-                    >First name</label
+                    >Primeiro nome</label
                   >
                   <div class="col-lg-9">
-                    <input class="form-control" type="text" value="Jane" />
+                    <input class="form-control" type="text" value="Thomas" />
                   </div>
                 </div>
                 <div class="form-group row">
                   <label class="col-lg-3 col-form-label form-control-label"
-                    >Last name</label
+                    >Sobrenome</label
                   >
                   <div class="col-lg-9">
-                    <input class="form-control" type="text" value="Bishop" />
+                    <input class="form-control" type="text" value="Sampaio" />
                   </div>
                 </div>
                 <div class="form-group row">
                   <label class="col-lg-3 col-form-label form-control-label"
-                    >Email</label
+                    >E-mail</label
                   >
                   <div class="col-lg-9">
                     <input
@@ -194,22 +169,14 @@
                 </div>
                 <div class="form-group row">
                   <label class="col-lg-3 col-form-label form-control-label"
-                    >Company</label
-                  >
-                  <div class="col-lg-9">
-                    <input class="form-control" type="text" value="" />
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label class="col-lg-3 col-form-label form-control-label"
-                    >Address</label
+                    >Endereço</label
                   >
                   <div class="col-lg-9">
                     <input
                       class="form-control"
                       type="text"
                       value=""
-                      placeholder="Street"
+                      placeholder="Rua"
                     />
                   </div>
                 </div>
@@ -222,7 +189,7 @@
                       class="form-control"
                       type="text"
                       value=""
-                      placeholder="City"
+                      placeholder="Cidade"
                     />
                   </div>
                   <div class="col-lg-3">
@@ -230,51 +197,13 @@
                       class="form-control"
                       type="text"
                       value=""
-                      placeholder="State"
+                      placeholder="Estado"
                     />
                   </div>
                 </div>
                 <div class="form-group row">
                   <label class="col-lg-3 col-form-label form-control-label"
-                    >Time Zone</label
-                  >
-                  <div class="col-lg-9">
-                    <select id="user_time_zone" class="form-control" size="0">
-                      <option value="Hawaii">(GMT-10:00) Hawaii</option>
-                      <option value="Alaska">(GMT-09:00) Alaska</option>
-                      <option value="Pacific Time (US &amp; Canada)">
-                        (GMT-08:00) Pacific Time (US &amp; Canada)
-                      </option>
-                      <option value="Arizona">(GMT-07:00) Arizona</option>
-                      <option value="Mountain Time (US &amp; Canada)">
-                        (GMT-07:00) Mountain Time (US &amp; Canada)
-                      </option>
-                      <option
-                        value="Central Time (US &amp; Canada)"
-                        selected="selected"
-                      >
-                        (GMT-06:00) Central Time (US &amp; Canada)
-                      </option>
-                      <option value="Eastern Time (US &amp; Canada)">
-                        (GMT-05:00) Eastern Time (US &amp; Canada)
-                      </option>
-                      <option value="Indiana (East)">
-                        (GMT-05:00) Indiana (East)
-                      </option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label class="col-lg-3 col-form-label form-control-label"
-                    >Username</label
-                  >
-                  <div class="col-lg-9">
-                    <input class="form-control" type="text" value="janeuser" />
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label class="col-lg-3 col-form-label form-control-label"
-                    >Password</label
+                    >Senha</label
                   >
                   <div class="col-lg-9">
                     <input
@@ -286,7 +215,7 @@
                 </div>
                 <div class="form-group row">
                   <label class="col-lg-3 col-form-label form-control-label"
-                    >Confirm password</label
+                    >Confirmar Senha</label
                   >
                   <div class="col-lg-9">
                     <input
@@ -309,7 +238,7 @@
                     <input
                       type="button"
                       class="btn btn-primary"
-                      value="Save Changes"
+                      value="Salvar Alterações"
                     />
                   </div>
                 </div>
@@ -319,7 +248,7 @@
         </div>
         <div class="col-lg-4 order-lg-1 text-center">
           <img
-            src="../assets/imgs/flambo.png"
+            src="../assets/imgs/empresario-ativista.jpg"
             class="mx-auto img-fluid img-circle d-block"
             alt="avatar"
           />

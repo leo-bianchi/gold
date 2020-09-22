@@ -3,46 +3,50 @@
   box-sizing: border-box;
 }
 
+#talk {
+  cursor: pointer !important;
+}
+
 body {
+  color: #222;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: "Roboto", sans-serif;
-  color: #222;
 }
-/* Link Styles */
 
 a {
-  text-decoration: none;
   color: #999;
+  text-decoration: none;
 }
+
 a:hover {
-  color: #6633ff;
+  color: #63f;
 }
 
 /* Section Styles */
 
 .main-nav {
-  width: 100%;
   background: black;
   min-height: 30px;
   padding: 10px;
   position: fixed;
   text-align: center;
+  width: 100%;
 }
 .nav {
   display: flex;
-  justify-content: space-around;
   font-weight: 700;
+  justify-content: space-around;
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
 }
 
 .nav .name {
+  color: white;
   display: block;
   margin-right: auto;
-  color: white;
 }
 .nav li {
   padding: 5px 10px 10px 10px;
@@ -64,36 +68,36 @@ header {
 }
 
 header .profile-image {
-  margin-top: 50px;
-  width: 150px;
-  height: 150px;
-  border-radius: 15px 50px;
   border: 2px solid white;
+  border-radius: 15px 50px;
+  height: 150px;
+  margin-top: 50px;
   transition: all 0.5s;
+  width: 150px;
 }
 
 .tag {
   background-color: #efefef;
-  color: black;
-  padding: 10px;
   border-radius: 5px;
+  color: black;
   display: table;
   margin: 10px auto;
+  padding: 10px;
 }
 .location {
   background-color: #222;
   color: yellow;
 }
 .card {
-  margin: 30px;
-  padding: 20px 40px 40px;
-  max-width: 500px;
-  text-align: left;
   background: #fff;
+  background: #f7f5f0;
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
+  margin: 30px;
+  max-width: 500px;
+  padding: 20px 40px 40px;
+  text-align: left;
   transition: all 0.5s;
-  background: #f7f5f0;
 }
 .card:hover {
   border-color: #ff99ff;
@@ -109,12 +113,12 @@ ul.skills {
 }
 
 .skills li {
-  border-radius: 6px;
-  display: inline-block;
   background: #ff9904;
+  border-radius: 6px;
   color: white;
-  padding: 5px 10px;
+  display: inline-block;
   margin: 2px;
+  padding: 5px 10px;
 }
 
 .skills li:nth-child(odd) {
@@ -122,14 +126,14 @@ ul.skills {
 }
 
 footer {
-  width: 100%;
   min-height: 30px;
   padding: 20px 0 40px 20px;
+  width: 100%;
 }
 
 footer .copyright {
-  top: -8px;
   font-size: 0.75em;
+  top: -8px;
 }
 
 footer ul {
@@ -142,28 +146,33 @@ footer ul li {
   display: inline-block;
 }
 
-a.social {
-  display: inline-block;
-  text-indent: -9999px;
-  margin-left: 5px;
-  width: 30px;
-  height: 30px;
+.social {
   background-size: 30px 30px;
+  display: inline-block;
+  height: 30px;
+  margin-left: 5px;
   opacity: 0.4;
+  text-indent: -9999px;
   transition: all 0.5s;
+  width: 30px;
 }
-a.twitter {
+
+.twitter {
   background-image: url(images/twitter.svg);
 }
-a.linkedin {
+
+.linkedin {
   background-image: url(images/linkedin.svg);
 }
-a.github {
+
+.github {
   background-image: url(images/github.svg);
 }
-a.social:hover {
+
+.social:hover {
   opacity: 1;
 }
+
 .clearfix {
   clear: both;
 }
@@ -173,10 +182,10 @@ a.social:hover {
   .flex {
     display: -ms-flexbox; /* TWEENER - IE 10 */
     display: flex;
-    max-width: 1200px;
     -ms-flex-pack: distribute;
     justify-content: space-around;
     margin: 0 auto;
+    max-width: 1200px;
   }
 
   header {
@@ -198,7 +207,7 @@ a.social:hover {
 
   footer {
     font-size: 1.3em;
-    max-width: 1200px;
     margin: 40px auto;
+    max-width: 1200px;
   }
 }

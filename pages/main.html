@@ -36,177 +36,49 @@
       <!--The div element for conectar button -->
       <div class="conectar-box">
         <img src="../assets/imgs/velhote01.png" />
-        <p class="box-button"><a href="#popup2">Conectar-me</a></p>
+        <p class="box-button"><a href="#popup1">Conectar-me</a></p>
       </div>
 
       <!--The div element for minhas conexoes-->
       <div class="conexoes-box">
         <img src="../assets/imgs/velhoteJogando.png" />
-        <p class="box-button"><a href="#popup2">Minhas conexões</a></p>
+        <p class="box-button"><a href="#popup1">Minhas conexões</a></p>
       </div>
     </div>
 
-    <div class="regiao-proximos"></div>
-
-    <!--The div element for the map -->
-    <div id="popup2" class="overlay light flex__container--center">
+    <div id="popup1" class="overlay">
       <a class="cancel" href="#"></a>
       <div class="popup">
-        <h2>Encontrar Conexões</h2>
+        <h2>Usuários próximos do seu local</h2>
         <a class="close" href="#">&times;</a>
         <div class="content">
           <a href="./profile.html">
-            <div id="googleMap" style="width: 100%; height: 400px"></div>
+            <div id="googleMap" style="width: 800px; height: 400px"></div>
           </a>
         </div>
       </div>
     </div>
+
     <script>
       function myMap() {
-        var mapProp = {
+        var mapOptions = {
           center: new google.maps.LatLng(-23.6347, -46.5149),
-          zoom: 14,
+          zoom: 15
         };
+
         var map = new google.maps.Map(
           document.getElementById("googleMap"),
-          mapProp
+          mapOptions
         );
+
+        var marker = new google.maps.Marker({
+          map: map,
+          draggable: false,
+          position: new google.maps.LatLng(-23.6347, -46.5149),
+        });
+        setMarkers(map);
       }
     </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDddNssq2cx9sw1n9_2xmWurKj-tUFIW8=&callback=myMap"></script>
   </body>
 </html>
-=======
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-
-    <title>Product example for Bootstrap</title>
-
-    <link
-      rel="canonical"
-      href="https://getbootstrap.com/docs/4.0/examples/product/"
-    />
-
-    <!-- Custom styles for this template -->
-
-    <link href="./css/style.css" rel="stylesheet" />
-
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
-  </head>
-
-  <body>
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"
-    ></script>
-
-    <div class="imagemDeFundo text-center bg-light">
-      <nav class="site-header sticky-top py-1">
-        <div
-          class="container d-flex flex-column flex-md-row justify-content-between"
-        >
-          <a class="py-2" href="./main.html">
-            <img
-              class="logo"
-              src="../assets/imgs/principal.png"
-              alt="Gold Logo"
-              width="100"
-              height="32"
-            />
-          </a>
-          <a class="py-2 d-none d-md-inline-block"></a>
-          <a class="py-2 d-none d-md-inline-block" href="./myprofile.html"
-            >PERFIL</a
-          >
-          <a class="py-2 d-none d-md-inline-block" href="./profile.html"
-            >CONEXÕES</a
-          >
-          <a class="py-2 d-none d-md-inline-block" href="./interests.html"
-            >CONECTAR</a
-          >
-        </div>
-      </nav>
-      <div class="col-md-5 p-lg-5 mx-auto my-5"></div>
-      <div class="product-device box-shadow d-none d-md-block"></div>
-      <div
-        class="product-device product-device-2 box-shadow d-none d-md-block"
-      ></div>
-    </div>
-
-    <footer class="container py-5">
-      <div class="row">
-        <div class="col-12 col-md">
-          <img
-            class="logo"
-            src="../assets/imgs/principal.png"
-            alt="Gold Logo"
-            width="50"
-            height="16"
-          />
-          <small class="d-block mb-3 text-muted">©White Cheese 2020</small>
-        </div>
-        <div class="col-6 col-md">
-          <h5>Features</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">Cool stuff</a></li>
-            <li><a class="text-muted" href="#">Random feature</a></li>
-            <li><a class="text-muted" href="#">Team feature</a></li>
-            <li><a class="text-muted" href="#">Stuff for developers</a></li>
-            <li><a class="text-muted" href="#">Another one</a></li>
-            <li><a class="text-muted" href="#">Last time</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <h5>Resources</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">Resource</a></li>
-            <li><a class="text-muted" href="#">Resource name</a></li>
-            <li><a class="text-muted" href="#">Another resource</a></li>
-            <li><a class="text-muted" href="#">Final resource</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <h5>Resources</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">Business</a></li>
-            <li><a class="text-muted" href="#">Education</a></li>
-            <li><a class="text-muted" href="#">Government</a></li>
-            <li><a class="text-muted" href="#">Gaming</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <h5>About</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">Team</a></li>
-            <li><a class="text-muted" href="#">Locations</a></li>
-            <li><a class="text-muted" href="#">Privacy</a></li>
-            <li><a class="text-muted" href="#">Terms</a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
->>>>>>> gbmadeira
