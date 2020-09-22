@@ -69,7 +69,6 @@ header {
 
 header .profile-image {
   border: 2px solid white;
-  border-radius: 15px 50px;
   height: 150px;
   margin-top: 50px;
   transition: all 0.5s;
