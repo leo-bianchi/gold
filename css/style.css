@@ -196,6 +196,7 @@ input[name="address"] {
   .popup {
     width: 100%;
   }
+
 }
 
 .interests {
@@ -638,4 +639,20 @@ a {
 
 .field + .field {
   margin-top: 16px;
+}
+
+.custom_nav {
+  color: #666 !important;
+}
+
+.custom_nav_item {
+  color: #c1272d !important;
+}
+
+.custom_nav_item:focus {
+  color: #666 !important;
+}
+
+.custom_nav_item:active {
+  color: #666 !important;
 }
