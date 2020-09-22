@@ -9,7 +9,6 @@ body {
   text-align: center;
   font-family: "Roboto", sans-serif;
   color: #222;
-  background: #f7f5f0;
 }
 /* Link Styles */
 
@@ -31,7 +30,6 @@ a:hover {
   position: fixed;
   text-align: center;
 }
-
 .nav {
   display: flex;
   justify-content: space-around;
@@ -46,13 +44,15 @@ a:hover {
   margin-right: auto;
   color: white;
 }
-
 .nav li {
   padding: 5px 10px 10px 10px;
 }
-
 .nav a {
   transition: all 0.5s;
+}
+
+a {
+  color: #007bff !important;
 }
 
 .nav a:hover {
@@ -60,15 +60,9 @@ a:hover {
 }
 
 header {
-  text-align: center;
-  background: url("images/toronto.png") no-repeat top center;
-  background-size: cover;
-  overflow: hidden;
-  padding-top: 60px;
-}
-header {
   line-height: 1.5;
 }
+
 header .profile-image {
   margin-top: 50px;
   width: 150px;
@@ -99,6 +93,7 @@ header .profile-image {
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
   transition: all 0.5s;
+  background: #f7f5f0;
 }
 .card:hover {
   border-color: #ff99ff;
