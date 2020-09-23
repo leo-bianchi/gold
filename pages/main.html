@@ -51,7 +51,7 @@
         <h2>Usuários próximos do seu local</h2>
         <a class="close" href="#">&times;</a>
         <div class="content">
-          <a href="./profile.html">
+          <!-- <a href="./profile.html"> -->
             <div id="googleMap" style="width: 800px; height: 400px"></div>
           </a>
         </div>
@@ -60,8 +60,10 @@
 
     <script>
       function myMap() {
+        var myLatlng = new google.maps.LatLng(-23.6347, -46.5149);
+        var myLatlng2 = new google.maps.LatLng(-23.6347, -46.5119);
         var mapOptions = {
-          center: new google.maps.LatLng(-23.6347, -46.5149),
+          center: myLatlng,
           zoom: 15
         };
 
@@ -70,11 +72,19 @@
           mapOptions
         );
 
-        var marker = new google.maps.Marker({
-          map: map,
-          draggable: false,
-          position: new google.maps.LatLng(-23.6347, -46.5149),
+        new google.maps.Marker({
+          position: myLatlng,
+          map,
+          title: "Hello World!"
         });
+
+        new google.maps.Marker({
+          position: myLatlng2,
+          map,
+          title: "Hello World!"
+        });
+      
+        
         setMarkers(map);
       }
     </script>
