@@ -135,7 +135,7 @@ main {
   grid-area: interests;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 1000px) {
   .profile__container--grid {
     grid-template-areas:
       "profilepic data"
@@ -164,7 +164,7 @@ span {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.8px;
   line-height: 1.8;
-  max-width: 60ch;
+  max-width: 100ch;
 }
 
 .card__description > li {
@@ -174,4 +174,16 @@ span {
 
 .carousel__image {
   background-size: contain;
+}
+
+.card__action--align {
+  padding: 8px 0 0 0 !important;
+}
+
+.btn--align {
+  display: block;
+}
+
+.btn--align + .btn--align {
+  margin-top: 16px;
 }
