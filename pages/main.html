@@ -52,41 +52,52 @@
         <a class="close" href="#">&times;</a>
         <div class="content">
           <!-- <a href="./profile.html"> -->
-            <div id="googleMap" style="width: 800px; height: 400px"></div>
+            <div id="map" style="width: 800px; height: 400px"></div>
           </a>
         </div>
       </div>
     </div>
 
     <script>
-      function myMap() {
-        var myLatlng = new google.maps.LatLng(-23.6347, -46.5149);
-        var myLatlng2 = new google.maps.LatLng(-23.6347, -46.5119);
-        var mapOptions = {
-          center: myLatlng,
-          zoom: 15
-        };
-
-        var map = new google.maps.Map(
-          document.getElementById("googleMap"),
-          mapOptions
-        );
-
-        new google.maps.Marker({
-          position: myLatlng,
-          map,
-          title: "Hello World!"
-        });
-
-        new google.maps.Marker({
-          position: myLatlng2,
-          map,
-          title: "Hello World!"
-        });
       
-        
-        setMarkers(map);
+      function myMap() {
+        var locations = [
+      ['Unidade 0', -23.6247, -46.5149, 6],
+      ['Unidade 1', -23.6347, -46.5149, 5],
+      ['Unidade 2', -23.6307, -46.5119, 4],
+      ['Unidade 3', -23.6257, -46.5199, 3],
+      ['Unidade 4', -23.6337, -46.5229, 2],
+      ['Unidade 5', -23.6327, -46.5300, 1]
+      ];
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 14,
+      center: new google.maps.LatLng(locations[0][1], locations[0][2])
+      });
+
+      var infowindow = new google.maps.InfoWindow();
+
+      var marker, i;
+
+      for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        icon:"../assets/imgs/grandfather.png",
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
       }
+      }
+
+
+
+      
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDddNssq2cx9sw1n9_2xmWurKj-tUFIW8=&callback=myMap"></script>
   </body>
