@@ -1,28 +1,25 @@
-if (document.getElementById("talk")) {
-  document.getElementById("talk").onclick = function () {
-    Swal.fire({
-      title: "Aprovação enviada",
-      icon: "info",
-      html:
-        "Foi enviada uma solicitação de aprovação de contato para o moderador de João Carlos.<br>" +
-        "<b>Você será notificado assim que for aprovado</b>",
-      showCloseButton: true,
-      showCancelButton: false,
-      focusConfirm: false,
-      confirmButtonText: '<i class="fa fa-thumbs-up"></i> Legal !',
-    });
-  };
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const contact = document.querySelector(".btn__contact") || "";
+  M.AutoInit();
 
-window.onload = () => {
-  if (document.querySelector("#profile-page")) {
-    Swal.fire({
-      title: "Solicitação Aprovada",
-      icon: "success",
-      html: "A sua solictação para Maria Antonieta foi aprovada!",
-      showCloseButton: true,
-      showCancelButton: false,
-      confirmButtonText: '<i class="fa fa-thumbs-up"></i> Legal !',
-    });
+  (function callCarousel() {
+    const options = {
+      fullWidth: true,
+      indicators: true,
+    };
+    const elem = document.querySelector(".carousel");
+    M.Carousel.init(elem, options);
+  })();
+
+  if (contact) {
+    (function callInfoAlert() {
+      contact.onclick = () => {
+        Swal.fire(
+          "Ótimo!",
+          "Sua solicitação foi enviada para um moderador.",
+          "info"
+        );
+      };
+    })();
   }
-};
+});
