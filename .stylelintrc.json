@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "selector-no-qualifying-type": [
+      true,
+      {
+        "ignore": ["attribute"]
+      }
+    ]
+  },
+  "plugins": ["stylelint-prettier"],
+  "extends": ["stylelint-config-standard", "stylelint-config-prettier"]
+}
