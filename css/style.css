@@ -76,6 +76,57 @@ main {
 
 /* RESET BLOCK END */
 
+.brand-logo img {
+  height: clamp(54px, 7vw, 64px);
+  line-height: 64px !important;
+  margin: auto 0 !important;
+  width: auto;
+}
+
+li {
+  margin-left: auto !important;
+}
+
+.card-image img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 160px;
+  width: 100%;
+}
+
+.card-image a {
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 160px;
+  width: 100%;
+}
+
+.content__link {
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-size: 28px;
+  position: relative;
+}
+
+.content__link::after {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 3px;
+  margin-top: 5px;
+  position: absolute;
+  right: 0;
+  transition: width 0.2s ease;
+  -webkit-transition: width 0.2s ease;
+  width: 0;
+}
+
+.content__link:hover::after {
+  background: #b71c1c; /* Red Darken 4 */
+  left: 0;
+  width: 100%;
+}
+
 .carousel .indicators .indicator-item {
   background-color: #c6c6c6;
   border: 1px solid rgba(75, 73, 73, 0.5);
@@ -98,17 +149,15 @@ main {
 
 /* RESET BLOCK END */
 
-.main__image {
-  background-image: url(../assets/images/landscape-fill.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 30vh;
+.main__image img {
+  background-size: contain;
   width: 100%;
 }
 
 .card__content--center {
   align-items: center;
   display: flex;
+  flex-shrink: 1;
   justify-content: center;
   margin: auto;
 }
