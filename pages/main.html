@@ -52,7 +52,7 @@
         <a class="close" href="#">&times;</a>
         <div class="content">
           <!-- <a href="./profile.html"> -->
-            <div id="map" style="width: 800px; height: 400px"></div>
+            <div id="googleMap" style="width: 800px; height: 400px"></div>
           </a>
         </div>
       </div>
@@ -62,16 +62,16 @@
       
       function myMap() {
         var locations = [
-      ['Unidade 0', -23.6247, -46.5149, 6],
-      ['Unidade 1', -23.6347, -46.5149, 5],
-      ['Unidade 2', -23.6307, -46.5119, 4],
-      ['Unidade 3', -23.6257, -46.5199, 3],
-      ['Unidade 4', -23.6337, -46.5229, 2],
+      ['Asilo do Bem', -23.6247, -46.5149, 6],
+      ['Amigos da Idade', -23.6347, -46.5149, 5],
+      ['Residencial Vida', -23.6307, -46.5119, 4],
+      ['Casa de Repouso Morada Primavera', -23.6257, -46.5199, 3],
+      ['Abrigo dos Idosos', -23.6337, -46.5229, 2],
       ['Unidade 5', -23.6327, -46.5300, 1]
       ];
 
-      var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 14,
+      var map = new google.maps.Map(document.getElementById('googleMap'), {
+      zoom: 15,
       center: new google.maps.LatLng(locations[0][1], locations[0][2])
       });
 
