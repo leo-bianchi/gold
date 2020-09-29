@@ -29,7 +29,17 @@
   font-family: "Bw Modelica", sans-serif;
   font-size: 14px;
 }
-
+.modal{
+  max-height: 80%;
+}
+.modal-gold{
+  width: 70%;
+  height: 80%;
+}
+.navbar-fixed {position: absolute;z-index:999999999;}
+.header-gold{
+  background-color: #2a2d2f;
+}
 .new--reset {
   font-weight: bold;
   margin-bottom: 8px !important;
@@ -44,7 +54,12 @@
 .card__title--reset {
   margin-bottom: 12px !important;
 }
-
+.card .card-content .card-title i {
+  line-height: 40px;
+}
+.button-modal{
+  margin-left: 12rem;
+}
 html,
 body {
   margin: 0;

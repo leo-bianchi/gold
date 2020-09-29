@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const contact = document.querySelector(".btn__contact") || "";
+  const contact2 = document.querySelector(".btn__contact2") || "";
   M.AutoInit();
 
   (function callCarousel() {
@@ -19,6 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
           "Sua solicitação foi enviada para um moderador.",
           "info"
         );
+      };
+    })();
+  }
+  if (contact2) {
+    (function callInfoAlert() {
+      contact2.onclick = () => {
+        Swal.fire("Salvo!", "", "info");
       };
     })();
   }

@@ -14,7 +14,12 @@
     <link rel="stylesheet" href="./css/style.css" />
     <script defer src="./js/script.js"></script>
 
-    <link rel="icon" href="./assets/icons/icon.ico" sizes="any" type="image/svg+xml">
+    <link
+      rel="icon"
+      href="./assets/icons/icon.ico"
+      sizes="any"
+      type="image/svg+xml"
+    />
 
     <title>G<old></title>
   </head>
@@ -25,11 +30,15 @@
           <div class="row">
             <div class="col s12">
               <a href="./index.html" class="brand-logo" target="_blank">
-                <img class="responsive-img" src="./assets/images/logo-branco.png" alt=""/>
+                <img
+                  class="responsive-img"
+                  src="./assets/images/logo-branco.png"
+                  alt=""
+                />
               </a>
               <ul class="right hide-on-med-and-down">
                 <li><a href="./pages/myprofile.html">PERFIL</a></li>
-                <li><a class="modal-trigger" href="#modal1" >CONEXÕES</a></li>
+                <li><a class="modal-trigger" href="#modal1">CONEXÕES</a></li>
                 <li><a class="modal-trigger" href="#modal2">CONECTAR</a></li>
               </ul>
             </div>
@@ -37,7 +46,7 @@
         </div>
       </nav>
     </div>
-    
+
     <div class="main__image">
       <img src="./assets/images/header-background.png" alt="" />
     </div>
@@ -114,92 +123,98 @@
         </div>
         <div id="googleMapConectar" style="width: 800px; height: 450px"></div>
       </div>
-     
     </div>
 
     <!-- Modal 1 End  -->
 
     <!-- Modal 2 Start  -->
     <div id="modal2" class="modal modal-gold">
-      <div class="modal-content">
+      <dv class="modal-content">
         <div class="modal-header">
           <h4>Conectar</h4>
         </div>
-        <div id="googleMap1" style="width: 800px; height: 450px"></div>
-      </div>
-      
+        <a href="./pages/friendprofile.html">
+          <div id="googleMap1" style="width: 800px; height: 450px"></div>
+        </a>
+      </dv>
     </div>
 
-    
     <!-- Modal 2 End  -->
     <script>
-      
       function myMap() {
         var locations = [
-      ['Asilo dos Bem', -23.6247, -46.5149, 6],
-      ['Amigos da Idade', -23.6347, -46.5149, 5],
-      ['Residencial Vida', -23.6307, -46.5119, 4],
-      ['Casa de Repouso Morada Primavera', -23.6257, -46.5199, 3],
-      ['Abrigo dos Idosos', -23.6337, -46.5229, 2],
-      ['Unidade 5', -23.6327, -46.5300, 1]
-      ];
+          ["Asilo dos Bem", -23.6247, -46.5149, 6],
+          ["Amigos da Idade", -23.6347, -46.5149, 5],
+          ["Residencial Vida", -23.6307, -46.5119, 4],
+          ["Casa de Repouso Morada Primavera", -23.6257, -46.5199, 3],
+          ["Abrigo dos Idosos", -23.6337, -46.5229, 2],
+          ["Unidade 5", -23.6327, -46.53, 1],
+        ];
 
-      var map = new google.maps.Map(document.getElementById('googleMap1'), {
-      zoom: 14.5,
-      center: new google.maps.LatLng(locations[0][1], locations[0][2])
-      });
+        var map = new google.maps.Map(document.getElementById("googleMap1"), {
+          zoom: 14.5,
+          center: new google.maps.LatLng(locations[0][1], locations[0][2]),
+        });
 
-      var map2 = new google.maps.Map(document.getElementById('googleMapConectar'), {
-      zoom: 14,
-      center: new google.maps.LatLng(locations[0][1], locations[0][2])
-      });
+        var map2 = new google.maps.Map(
+          document.getElementById("googleMapConectar"),
+          {
+            zoom: 14,
+            center: new google.maps.LatLng(locations[0][1], locations[0][2]),
+          }
+        );
 
-      var infowindow = new google.maps.InfoWindow();
+        var infowindow = new google.maps.InfoWindow();
 
-      var marker, i;
+        var marker, i;
 
-      for (i = 0; i < locations.length; i++) {  
-      marker = new google.maps.Marker({
-        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        icon: {
-        size: new google.maps.Size(30, 30),
-        scaledSize: new google.maps.Size(30, 30),
-        url: "./assets/icons/icon.ico" 
-        },
-        map: map
-      });
+        for (i = 0; i < locations.length; i++) {
+          marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            icon: {
+              size: new google.maps.Size(30, 30),
+              scaledSize: new google.maps.Size(30, 30),
+              url: "./assets/icons/icon.ico",
+            },
+            map: map,
+          });
 
-      google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        return function() {
-          infowindow.setContent(locations[i][0]);
-          infowindow.open(map, marker);
+          google.maps.event.addListener(
+            marker,
+            "click",
+            (function (marker, i) {
+              return function () {
+                infowindow.setContent(locations[i][0]);
+                infowindow.open(map, marker);
+              };
+            })(marker, i)
+          );
         }
-      })(marker, i));
-      }
 
-      for (i = 0; i < 2; i++) {  
-      marker = new google.maps.Marker({
-        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        icon: {
-        size: new google.maps.Size(30, 30),
-        scaledSize: new google.maps.Size(30, 30),
-        url: "./assets/icons/icon.ico" 
-        },
-        map: map2
-      });
+        for (i = 0; i < 2; i++) {
+          marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            icon: {
+              size: new google.maps.Size(30, 30),
+              scaledSize: new google.maps.Size(30, 30),
+              url: "./assets/icons/icon.ico",
+            },
+            map: map2,
+          });
 
-      google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        return function() {
-          infowindow.setContent(locations[i][0]);
-          infowindow.open(map2, marker);
+          google.maps.event.addListener(
+            marker,
+            "click",
+            (function (marker, i) {
+              return function () {
+                infowindow.setContent(locations[i][0]);
+                infowindow.open(map2, marker);
+              };
+            })(marker, i)
+          );
         }
-      })(marker, i));
       }
-      }
-
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfnjPDFMYf-apu-HCVzZC4xA_kX_1zeI0=&callback=myMap"></script>
-
-
   </body>
 </html>

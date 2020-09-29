@@ -1,176 +1,235 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <!-- Meta Block -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
-
-    <!-- Materialize -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../css/materialize.min.css" />
-    <script defer src="../js/materialize.min.js"></script>
-
-    <!-- Sweet Alert -->
-    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-
-    <!-- Own imports -->
-    <link rel="stylesheet" href="../css/style.css" />
-    <script defer src="../js/script.js"></script>
-
-    <link
-      rel="icon"
-      href="../assets/icons/icon.ico"
-      sizes="any"
-      type="image/svg+xml"
-    />
-
-    <title>G<old></title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="nav-wrapper s12 header-gold">
-          <a href="#" class="brand-logo col"
-            ><img
-              class="responsive-img"
-              src="../assets/images/logo-branco.png"
-              alt=""
-          /></a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a>PERFIL</a></li>
-                <li><a class="modal-trigger" href="#modal1" >CONEXÕES</a></li>
-                <li><a class="modal-trigger" href="#modal2">CONECTAR</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div class="container">
-        <div class="row">
-          <div class="profile__container--grid">
-            <div class="card profilepic s12">
-              <div class="card-content">
-                  <script>
-                      var c = this;
-                      c.user={
-                          nome: "Gabriel Madeira",
-                          idade: 20,
-                          email: "gbmadeira27@gmail.com",
-                          endereco: "Rua X"
-                      }
-                  </script>
-                <span class="card-title">{{c.user.nome}}</span>
-                <div class="carousel carousel-slider">
-                  <a class="carousel-item" href="#one!"
-                    ><img
-                      class="carousel__image responsive-img"
-                      src="../assets/images/joao-carlos.png"
-                  /></a>
-                  <a class="carousel-item" href="#two!"
-                    ><img src="https://lorempixel.com/800/400/food/2"
-                  /></a>
-                  <a class="carousel-item" href="#three!"
-                    ><img src="https://lorempixel.com/800/400/food/3"
-                  /></a>
-                  <a class="carousel-item" href="#four!"
-                    ><img src="https://lorempixel.com/800/400/food/4"
-                  /></a>
-                </div>
-              </div>
+   <head>
+      <!-- Meta Block -->
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+      <!-- Materialize -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="../css/materialize.min.css" />
+      <script defer src="../js/materialize.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+      <!-- Sweet Alert -->
+      <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+      <!-- Own imports -->
+      <link rel="stylesheet" href="../css/style.css" />
+      <script defer src="../js/script.js"></script>
+      <link rel="icon" href="../assets/icons/icon.ico" sizes="any" type="image/svg+xml"/>
+      <title>
+         G
+         <old>
+      </title>
+   </head>
+   <body>
+      <header>
+         <nav>
+            <div class="nav-wrapper s12 header-gold">
+               <a href= "../index.html" class="brand-logo col"
+                  ><img class="responsive-img" src="../assets/images/logo-branco.png" alt=""/></a>
+               <ul id="nav-mobile" class="right hide-on-med-and-down">
+                  <li><a>PERFIL</a></li>
+                  <li><a class="modal-trigger" href="#modal1" >CONEXÕES</a></li>
+                  <li><a class="modal-trigger" href="#modal2">CONECTAR</a></li>
+               </ul>
             </div>
-            <div class="card data s12">
-              <div class="card-content">
-                <span class="card-title">Quem sou eu</span>
-                <p class="card__description">
-                  Eu sou o João, tenho 75 anos, tenho dois netos, um garoto de
-                  10 anos e uma menina de 5. Os dois são o maior brilho da minha
-                  vida. Eu passo mais tempo com eles do que com meu filho, ele
-                  está sempre muito ocupado trabalhando e não tem tempo pra mim.
-                  Trabalhei desde criança na oficina do meu pai e fiquei lá até
-                  me aposentar. Eu vendi a oficina para fazer uma poupança para
-                  meus netos. Aqui no asilo não podemos fazer muito e eu já não
-                  tenho tanta saúde quanto antigamente. Não consigo jogar
-                  futebol, mas não perco um jogo do Corinthians. Meu sonho é
-                  poder ir a um jogo no Itaquerão algum dia.
-                </p>
-                <br />
-                <span class="card-title"
-                  >O que eu sinto falta da minha infância</span
-                >
-
-                <ul class="collection card__description">
-                  <li class="collection-item">Comer Macarrão aos domingos</li>
-                  <li class="collection-item">
-                    Jogar bola na rua usando a camisa do Timão
-                  </li>
-                  <li class="collection-item">Empinar pipa</li>
-                  <li class="collection-item">Ajudar meu pai na oficina</li>
-                  <li class="collection-item">
-                    Buscar leite de manhã para minha família
-                  </li>
-                </ul>
-                <div class="card__action--align card-action">
-                  <a
-                    class="waves-effect waves-light btn-large btn__contact red darken-1 btn--align"
-                    ><i class="material-icons right">chat_bubble</i>Contactar</a
-                  >
-                  <a
-                    data-target="modal1"
-                    class="waves-effect waves-light btn-large btn__contact blue darken-1 direction-right modal-trigger btn--align"
-                    ><i class="material-icons right">map</i>Abrir Mapa</a
-                  >
-                </div>
-              </div>
+         </nav>
+      </header>
+      <main>
+         <div class="container">
+            <div class="row">
+               <div class="profile__container--grid">
+                  <div class="card profilepic s12">
+                     <div class="card-content">
+                        <span class="card-title" id="nome">João Melão</span>
+                        <span class="card__description" id="idade">23 anos</span>
+                        <div class="carousel carousel-slider">
+                           <a class="carousel-item">
+                           <img class="carousel__image responsive-img" src="../assets/images/markZ.jpg"/>
+                           </a>
+                           <a class="carousel-item">
+                           <img class="carousel__image responsive-img" src="../assets/images/markZ2.jpg"/>
+                           </a>
+                           <a class="carousel-item">
+                           <img class="carousel__image responsive-img" src="../assets/images/markZ3.jpg"/>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card data s12">
+                     <div class="card-content">
+                        <span class="card-title">Sobre mim</span>
+                        <p class="card__description" id="sobreMim">
+                           João Melão, arquiteto, tenho 20 anos, moro com meus pais em São Paulo,
+                           e sempre que possível, estou indo visitar asilos e orfanatos em busca de melhorar
+                           o mundo pra quem precisa mais dele.
+                           Trabalho muito durante a semana, então procuro fazer essas ações no fim de semana
+                           ou em feriados.
+                        </p>
+                        <div class="card interests s12">
+                           <div class="card-content">
+                              <span class="card-title card__title--reset">Interesses
+                                <a class="btn-floating btn-medium waves-effect waves-light green modal-trigger button-modal" href="#modal1"><i class="material-icons">create</i></a>
+                              </span>
+                              <div class="card__content--flex" style="clear: both">
+                                 <span id="viagem" class="badge new new--reset light-blue">Viagem</span>
+                                 <span id="negocios" class="badge new new--reset green">Negocios</span>
+                                 <span id="filmes" class="badge new new--reset red lighten-1">Filmes</span>
+                                 <span id="carros" style="display:none" class="badge new new--reset blue-grey lighten-1">Carros</span>
+                              </div>
+                              <!-- Modal Structure -->
+                              <div id="modal1" class="modal bottom-sheet">
+                                 <div class="modal-content">
+                                    <h4>Modal Header</h4>
+                                    <div id="modal3" class="modal bottom-sheet open" tabindex="0" style="z-index: 1003; display: block; opacity: 1; bottom: 0px;">
+                                       <div class="modal-content">
+                                          <h3 class="header">Interesses</h3>
+                                          <ul class="collection">
+                                             <li class="collection-item avatar">
+                                                <i class="material-icons circle">airplanemode_active</i>
+                                                <span class="title">Viagens</span>
+                                                <p class="secondary-content">
+                                                   <label>
+                                                   <input type="checkbox" class="filled-in " checked="checked" onclick="updateInteresse('viagem')"/>
+                                                   <span></span>
+                                                   </label>
+                                                </p>
+                                             </li>
+                                             <li class="collection-item avatar">
+                                                <i class="material-icons circle green">assessment</i>
+                                                <span class="title">Negocios</span>
+                                                <p class="secondary-content">
+                                                   <label>
+                                                   <input  type="checkbox" class="filled-in " checked="False" onclick="updateInteresse('negocios')"/>
+                                                   <span ></span>
+                                                   </label>
+                                                </p>
+                                             </li>
+                                             <li class="collection-item avatar">
+                                                <i class="material-icons circle red">play_arrow</i>
+                                                <span class="title">Filmes</span>
+                                                <p class="secondary-content">
+                                                   <label>
+                                                   <input type="checkbox" class="filled-in " checked="checked" onclick="updateInteresse('filmes')"/>
+                                                   <span></span>
+                                                   </label>
+                                                </p>
+                                             </li>
+                                             <li class="collection-item avatar">
+                                                <i class="material-icons circle blue">directions_car</i>
+                                                <span class="title">Carros</span>
+                                                <p class="secondary-content">
+                                                   <label>
+                                                   <input type="checkbox" class="filled-in "  onclick="updateInteresse('carros')"/>
+                                                   <span></span>
+                                                   </label>
+                                                </p>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="modal-footer">
+                                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <script>
+                           function updateInteresse(interesse)
+                           {
+                               var interrestId = document.getElementById(interesse);
+                           
+                               if(interrestId.style.display === 'none')
+                               {
+                                 interrestId.style.display = 'inline';
+                                 console.log("inline");
+                               }
+                               else
+                               {
+                                 interrestId.style.display = 'none';
+                                 console.log("none");
+                               }
+                             
+                           }
+                        </script>
+                        <br />
+                        <div class="card__action--align card-action">
+                           <a
+                              data-target="modalEdit"
+                              class="waves-effect waves-light btn-large red darken-1 direction-right modal-trigger btn--align"
+                              ><i class="material-icons right">create</i>Editar</a
+                              >
+                           <a
+                              data-target="modal1"
+                              class="waves-effect waves-light btn-large btn__contact2 blue darken-1 direction-right modal-trigger btn--align"
+                              ><i class="material-icons right">done</i>Salvar</a
+                              >
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="card interests s12">
-              <div class="card-content">
-                <span class="card-title card__title--reset">Interesses</span>
-                <div class="card__content--flex" style="clear: both">
-                  <span class="badge new new--reset light-blue">Pescaria</span>
-                  <span class="badge new new--reset green">Futebol</span>
-                  <span class="badge new new--reset red lighten-1">Bilhar</span>
-                  <span class="badge new new--reset blue-grey lighten-1"
-                    >Carros</span
-                  >
-                  <span
-                    class="badge new new--reset blue-grey lighten-3 blue-grey-text text-darken-2"
-                    >Carros</span
-                  >
-                  <span class="badge new new--reset light-blue">Pescaria</span>
-                  <span class="badge new new--reset green">Futebol</span>
-                  <span class="badge new new--reset red lighten-1">Bilhar</span>
-                  <span class="badge new new--reset blue-grey lighten-1"
-                    >Carros</span
-                  >
-                  <span
-                    class="badge new new--reset blue-grey lighten-3 blue-grey-text text-darken-2"
-                    >Carros</span
-                  >
-                </div>
-              </div>
+         </div>
+      </main>
+      <!-- Modal -->
+      <div id="modalEdit" class="modal">
+         <div class="modal-header">
+            <h4>Editar</h4>
+         </div>
+         <div class="modal-content">
+            <div class="row">
+               <form class="col s12">
+                  <div class="row">
+                     <div class="input-field col s6">
+                        <input placeholder="Gabriel" id="first_name_modal" type="text" class="validate">
+                        <label for="first_name">Nome</label>
+                     </div>
+                     <div class="input-field col s6">
+                        <input placeholder="Madeira" id="last_name_modal" type="text" class="validate">
+                        <label for="last_name">Sobrenome</label>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="input-field col s12">
+                        <input id="password" type="password" class="validate">
+                        <label for="password">Senha</label>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="input-field col s12">
+                        <input placeholder="gabriel.madeira@gmail.com" id="email_modal" type="email" class="validate">
+                        <label for="email">Email</label>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="input-field col s12">
+                        <input placeholder="20" id="age_modal" type="number" class="validate">
+                        <label for="age">Idade</label>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="input-field col s12">
+                        <textarea id="about_modal" class="materialize-textarea"></textarea>
+                        <label for="about_modal">Sobre mim</label>
+                     </div>
+                  </div>
+               </form>
             </div>
-          </div>
-        </div>
+         </div>
+         <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-light btn-large blue darken-1 direction-right btn--align" id="modalButton">
+            <i class="material-icons right">done</i>Aplicar
+            </a>
+         </div>
+         <script>
+            $("#modalButton").click(function(){
+              $("#nome").text( $("#first_name_modal").val() +" "+ $("#last_name_modal").val() );
+              $("#idade").text( $("#age_modal").val() +" anos" );
+              $("#sobreMim").text( $("#about_modal").val());
+            });
+         </script>
       </div>
-    </main>
-
-    <!-- Modal -->
-    <div id="modal1" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4>Local do João</h4>
-        </div>
-        <p>Mapa aqui</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat"
-          >Fechar</a
-        >
-      </div>
-    </div>
-  </body>
+   </body>
 </html>
