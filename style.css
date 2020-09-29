@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+@font-face {
+  font-family: "Bw Modelica";
+  src: url("../assets/font/bwmodelica/woff/BwModelica-Regular.woff")
+      format("woff"),
+    url("../assets/font/bwmodelica/woff2/BwModelica-Regular.woff2")
+      format("woff2"),
+    url("../assets/font/bwmodelica/otf/BwModelica-Regular.otf")
+      format("opentype"),
+    url("../assets/font/bwmodelica/eot/BwModelica-Regular.eot");
+}
+
+@font-face {
+  font-family: "Bw Modelica";
+  font-weight: bold;
+  src: url("../assets/font/bwmodelica/woff/BwModelica-Bold.woff") format("woff"),
+    url("../assets/font/bwmodelica/woff2/BwModelica-Bold.woff2") format("woff2"),
+    url("../assets/font/bwmodelica/otf/BwModelica-Bold.otf") format("opentype"),
+    url("../assets/font/bwmodelica/eot/BwModelica-Bold.eot");
+}
+
+/* RESET BLOCK START */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: "Bw Modelica", sans-serif;
+  font-size: 14px;
+}
+.modal{
+  max-height: 80%;
+}
+.modal-gold{
+  width: 70%;
+  height: 80%;
+}
+.navbar-fixed {position: absolute;z-index:999999999;}
+.header-gold{
+  background-color: #2a2d2f;
+}
+.new--reset {
+  font-weight: bold;
+  margin-bottom: 8px !important;
+  margin-left: 0 !important;
+  margin-right: 4px !important;
+}
+
+.new::after {
+  content: "" !important;
+}
+
+.card__title--reset {
+  margin-bottom: 12px !important;
+}
+.card .card-content .card-title i {
+  line-height: 40px;
+}
+.button-modal{
+  margin-left: 12rem;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+main {
+  margin-top: 32px;
+}
+
+#googleMap {
+  position: static !important;
+}
+
+.carousel {
+  height: auto;
+  max-height: 500px;
+  width: auto;
+}
+
+.indicators {
+  display: block;
+  max-height: 100px;
+}
+
+/* RESET BLOCK END */
+
+.brand-logo img {
+  height: clamp(54px, 7vw, 64px);
+  line-height: 64px !important;
+  margin: auto 0 !important;
+  width: auto;
+}
+
+li {
+  margin-left: auto !important;
+}
+
+.card-image img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 160px;
+  width: 100%;
+}
+
+.card-image a {
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 160px;
+  width: 100%;
+}
+
+.content__link {
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-size: 28px;
+  position: relative;
+}
+
+.content__link::after {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 3px;
+  margin-top: 5px;
+  position: absolute;
+  right: 0;
+  transition: width 0.2s ease;
+  -webkit-transition: width 0.2s ease;
+  width: 0;
+}
+
+.content__link:hover::after {
+  background: #b71c1c; /* Red Darken 4 */
+  left: 0;
+  width: 100%;
+}
+
+.carousel .indicators .indicator-item {
+  background-color: #c6c6c6;
+  border: 1px solid rgba(75, 73, 73, 0.5);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+    0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+    0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+  height: 16px;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+  width: 16px;
+}
+.carousel .indicators .indicator-item:hover {
+  transform: scale(1.8);
+}
+
+.carousel .indicators .indicator-item.active {
+  background-color: #ee6e73;
+}
+
+/* RESET BLOCK END */
+
+.main__image img {
+  background-size: contain;
+  width: 100%;
+}
+
+.card__content--center {
+  align-items: center;
+  display: flex;
+  flex-shrink: 1;
+  justify-content: center;
+  margin: auto;
+}
+
+.profile__container--grid {
+  column-gap: 1rem;
+  display: grid;
+  grid-template-areas:
+    "profilepic"
+    "interests"
+    "data";
+  left: auto;
+  right: auto;
+  row-gap: 1rem;
+}
+
+.profilepic {
+  grid-area: profilepic;
+}
+
+.data {
+  grid-area: data;
+}
+
+.interests {
+  grid-area: interests;
+}
+
+@media only screen and (min-width: 1000px) {
+  .profile__container--grid {
+    grid-template-areas:
+      "profilepic data"
+      "interests data";
+    grid-template-columns: 1fr minmax(0, 1fr);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .card {
+    width: 100% !important;
+  }
+}
+
+.card__content--flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+span {
+  align-self: stretch;
+  flex: 1 0 21%;
+}
+
+.card__description {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.8px;
+  line-height: 1.8;
+  max-width: 100ch;
+}
+
+.card__description > li {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+}
+
+.carousel__image {
+  background-size: contain;
+}
+
+.card__action--align {
+  padding: 8px 0 0 0 !important;
+}
+
+.btn--align {
+  display: block;
+}
+
+.btn--align + .btn--align {
+  margin-top: 16px;
+}
