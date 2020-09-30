@@ -1,14 +1,14 @@
+M.AutoInit();
 document.addEventListener("DOMContentLoaded", () => {
   const contact = document.querySelector(".btn__contact") || "";
   const contact2 = document.querySelector(".btn__contact2") || "";
-  M.AutoInit();
+  const elem = document.querySelector(".carousel");
 
   (function callCarousel() {
     const options = {
       fullWidth: true,
       indicators: true,
     };
-    const elem = document.querySelector(".carousel");
     M.Carousel.init(elem, options);
   })();
 
