@@ -88,10 +88,10 @@
         <div class="row">
           <div class="col m12 s12">
             <h6>NA SUA REGIÃO</h6>
-            <ul class="collection">
+            <ul id="collections" class="collection">
               <li class="collection-item avatar">
                 <img src="./assets/images/casa1.png" alt="" class="circle" />
-                <span class="title">Casa de Repouso Total Care</span>
+                <span id="Span01" class="title">Casa de Repouso Total Care</span>
                 <a href="#!" class="secondary-content"
                   ><i class="material-icons">5KM</i></a
                 >
@@ -106,9 +106,8 @@
               <li class="collection-item avatar">
                 <img src="./assets/images/casa3.png" alt="" class="circle" />
                 <span class="title">Casa de Repouso Vila Duarte</span>
-                <a href="#!" class="secondary-content"
-                  ><i class="material-icons">12KM</i></a
-                >
+                <a href="#!" class="secondary-content">
+                  <i class="material-icons">12KM</i></a>
               </li>
             </ul>
           </div>
@@ -139,7 +138,54 @@
         </a>
       </dv>
     </div>
+<script>
+var data;
 
+
+</script>
+    <script>
+      fetch('https://run.mocky.io/v3/257aff41-5a96-4a81-aed1-ddf9178ddf39')
+        .then(response => response.json())
+        .then(data => createItems(data.index.asilos));
+
+      function createItems(asilos){
+        asilos.forEach(element => {
+          //create li
+        var liEntry = document.createElement('li');
+        liEntry.className = "collection-item avatar";
+
+        //create img
+        var imgEntry = document.createElement('img');
+        imgEntry.src = element.imgpath;
+        imgEntry.className = "circle"
+
+        //create span
+        var spanEntry = document.createElement('span');
+        spanEntry.className = "title";
+        spanEntry.innerText = element.nome;
+
+        //create link
+        var aEntry = document.createElement('a');
+        aEntry.className = "secondary-content";
+        aEntry.href = "#!"
+
+        //create km
+        var iEntry = document.createElement('i');
+        iEntry.className = "material-icons";
+        iEntry.innerText = element.distancia;
+
+        var list = document.getElementById("collections");
+        
+        aEntry.appendChild(iEntry);
+        liEntry.appendChild(imgEntry);
+        liEntry.appendChild(spanEntry);
+        liEntry.appendChild(aEntry);
+        list.appendChild(liEntry);
+        });
+        
+        }
+      
+    </script>
     <!-- Modal 2 End  -->
     <script>
       function myMap() {
