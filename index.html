@@ -89,26 +89,7 @@
           <div class="col m12 s12">
             <h6>NA SUA REGIÃO</h6>
             <ul id="collections" class="collection">
-              <li class="collection-item avatar">
-                <img src="./assets/images/casa1.png" alt="" class="circle" />
-                <span id="Span01" class="title">Casa de Repouso Total Care</span>
-                <a href="#!" class="secondary-content"
-                  ><i class="material-icons">5KM</i></a
-                >
-              </li>
-              <li class="collection-item avatar">
-                <img src="./assets/images/casa2.png" alt="" class="circle" />
-                <span class="title">Casa de Repouso São Caetano</span>
-                <a href="#!" class="secondary-content"
-                  ><i class="material-icons">7KM</i></a
-                >
-              </li>
-              <li class="collection-item avatar">
-                <img src="./assets/images/casa3.png" alt="" class="circle" />
-                <span class="title">Casa de Repouso Vila Duarte</span>
-                <a href="#!" class="secondary-content">
-                  <i class="material-icons">12KM</i></a>
-              </li>
+              
             </ul>
           </div>
         </div>
@@ -144,9 +125,9 @@ var data;
 
 </script>
     <script>
-      fetch('https://run.mocky.io/v3/257aff41-5a96-4a81-aed1-ddf9178ddf39')
+      fetch('https://5f7fb003d6aabe00166f0843.mockapi.io/index')
         .then(response => response.json())
-        .then(data => createItems(data.index.asilos));
+        .then(data => createItems(data.asilos));
 
       function createItems(asilos){
         asilos.forEach(element => {
