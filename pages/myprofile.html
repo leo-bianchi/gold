@@ -10,25 +10,24 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    />
     <link rel="stylesheet" href="../css/materialize.min.css" />
-    <script defer src="../js/materialize.min.js"></script>
+    <script src="../js/materialize.min.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
     <!-- Sweet Alert -->
-    <script async src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
     <!-- Own imports -->
     <link rel="stylesheet" href="../css/style.css" />
-    <script defer src="../js/script.js"></script>
+
     <link
       rel="icon"
       href="../assets/icons/icon.ico"
       sizes="any"
       type="image/svg+xml"
     />
-    <title>G <old></title>
+    <title>G<old></title>
   </head>
   <body>
     <header>
@@ -49,30 +48,22 @@
       </nav>
     </header>
     <main>
-      <div class="container">
+      <div
+        class="container"
+        data-stein-url="https://api.steinhq.com/v1/storages/5f84f9c65d3cdc44fcd7d5cc/API"
+        data-stein-search='{"Nome": "Erick Gomes"}'
+      >
         <div class="row">
           <div class="profile__container--grid">
             <div class="card profilepic s12">
               <div class="card-content">
-                <span class="card-title" id="nome">João Melão</span>
-                <span class="card__description" id="idade">23 anos</span>
+                <span class="card-title" id="nome">{{Nome}}</span>
+                <span class="card__description" id="idade">{{Idade}} anos</span>
                 <div class="carousel carousel-slider">
                   <a class="carousel-item">
                     <img
                       class="carousel__image responsive-img"
-                      src="../assets/images/markZ.jpg"
-                    />
-                  </a>
-                  <a class="carousel-item">
-                    <img
-                      class="carousel__image responsive-img"
-                      src="../assets/images/markZ2.jpg"
-                    />
-                  </a>
-                  <a class="carousel-item">
-                    <img
-                      class="carousel__image responsive-img"
-                      src="../assets/images/markZ3.jpg"
+                      src="../assets/images/erick02.jpeg"
                     />
                   </a>
                 </div>
@@ -81,13 +72,7 @@
             <div class="card data s12">
               <div class="card-content">
                 <span class="card-title">Sobre mim</span>
-                <p class="card__description" id="sobreMim">
-                  João Melão, arquiteto, tenho 20 anos, moro com meus pais em
-                  São Paulo, e sempre que possível, estou indo visitar asilos e
-                  orfanatos em busca de melhorar o mundo pra quem precisa mais
-                  dele. Trabalho muito durante a semana, então procuro fazer
-                  essas ações no fim de semana ou em feriados.
-                </p>
+                <p class="card__description" id="sobreMim">{{Descrição}}</p>
                 <div class="card interests s12">
                   <div class="card-content">
                     <span class="card-title card__title--reset"
@@ -336,4 +321,7 @@
       </script>
     </div>
   </body>
+  <script src="../js/script.js"></script>
+  <script src="https://unpkg.com/stein-js-client"></script>
+  <script src="https://unpkg.com/stein-expedite@0.0.4/dist/index.js"></script>
 </html>

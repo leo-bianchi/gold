@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta Block -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+
+    <!-- Materialize -->
+    <link rel="stylesheet" href="../css/materialize.min.css" />
+    <script defer src="../js/materialize.min.js"></script>
+
+    <!-- Own imports -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <script defer src="../js/script.js"></script>
+
+    <title>G<old></title>
+
+    <link
+      rel="icon"
+      href="../assets/icons/icon.ico"
+      sizes="any"
+      type="image/svg+xml"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <table
+          data-stein-url="https://api.steinhq.com/v1/storages/5f84f9c65d3cdc44fcd7d5cc/API"
+          data-stein-limit="3"
+          data-stein-search='{"Status": "Aguardando Aprovação"}'
+          class="responsive-table striped centered"
+        >
+          <thead>
+            <tr>
+              <th>Rg</th>
+              <th>Nome</th>
+              <th>Idade</th>
+              <th>Status</th>
+              <th>Quer Falar Com</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <td><a href="profileapprover.html">{{Rg}}</a></td>
+            <td>{{Nome}}</td>
+            <td>{{Idade}}</td>
+            <td>{{Status}}</td>
+            <td>{{Contato}}</td>
+            <td>
+              <a href="#" class="btn" onclick="approve({{Rg}}, 'Aprovado')"
+                >Aprovar</a
+              >
+              <a href="#" class="btn" onclick="approve({{Rg}}, 'Rejeitado')"
+                >Rejeitar</a
+              >
+            </td>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/stein-js-client"></script>
+  <script src="https://unpkg.com/stein-expedite@0.0.4/dist/index.js"></script>
+  <script>
+    function approve(id, status) {
+      console.log(id, status);
+      const store = new SteinStore(
+        "https://api.steinhq.com/v1/storages/5f84f9c65d3cdc44fcd7d5cc"
+      );
+      store
+        .edit("API", {
+          search: { Rg: id.toString() },
+          set: { Status: status },
+        })
+        .then((res) => {
+          console.log(res);
+          window.location.reload();
+        });
+    }
+
+    setTimeout(() => {
+      const table = document.getElementsByTagName("table")[0].innerHTML;
+      console.log(table);
+      if (!table) {
+        const messageDiv = document.createElement("div");
+        const paragraph = document.createElement("p");
+        paragraph.textContent = "Você não possui aprovações pendentes";
+        paragraph.setAttribute("class", "center-align");
+        messageDiv.appendChild(paragraph);
+        messageDiv.setAttribute("class", "center-align");
+        document.getElementsByClassName("row")[0].appendChild(messageDiv);
+      }
+    }, 1500);
+  </script>
+</html>

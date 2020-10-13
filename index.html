@@ -88,9 +88,7 @@
         <div class="row">
           <div class="col m12 s12">
             <h6>NA SUA REGIÃO</h6>
-            <ul id="collections" class="collection">
-              
-            </ul>
+            <ul id="collections" class="collection"></ul>
           </div>
         </div>
       </div>
@@ -114,58 +112,58 @@
         <div class="modal-header">
           <h4>Conectar</h4>
         </div>
-        <a href="./pages/friendprofile.html">
+        <a href="./pages/asilo.html">
           <div id="googleMap1"></div>
         </a>
       </dv>
     </div>
-<script>
-var data;
-
-
-</script>
     <script>
-      fetch('https://5f7fb003d6aabe00166f0843.mockapi.io/index')
-        .then(response => response.json())
-        .then(data => createItems(data.asilos));
+      var data;
+    </script>
+    <script>
+      fetch("https://5f7fb003d6aabe00166f0843.mockapi.io/index")
+        .then((response) => response.json())
+        .then((data) => createItems(data.asilos));
 
-      function createItems(asilos){
-        asilos.forEach(element => {
+      function createItems(asilos) {
+        asilos.forEach((element) => {
           //create li
-        var liEntry = document.createElement('li');
-        liEntry.className = "collection-item avatar";
+          var liEntry = document.createElement("li");
+          liEntry.className = "collection-item avatar";
 
-        //create img
-        var imgEntry = document.createElement('img');
-        imgEntry.src = element.imgpath;
-        imgEntry.className = "circle"
+          var link = document.createElement("a");
+          link.href = "./pages/asilo.html";
+          link.appendChild(liEntry);
 
-        //create span
-        var spanEntry = document.createElement('span');
-        spanEntry.className = "title";
-        spanEntry.innerText = element.nome;
+          //create img
+          var imgEntry = document.createElement("img");
+          imgEntry.src = element.imgpath;
+          imgEntry.className = "circle";
 
-        //create link
-        var aEntry = document.createElement('a');
-        aEntry.className = "secondary-content";
-        aEntry.href = "#!"
+          //create span
+          var spanEntry = document.createElement("span");
+          spanEntry.className = "title";
+          spanEntry.innerText = element.nome;
 
-        //create km
-        var iEntry = document.createElement('i');
-        iEntry.className = "material-icons";
-        iEntry.innerText = element.distancia;
+          //create link
+          var aEntry = document.createElement("a");
+          aEntry.className = "secondary-content";
+          aEntry.href = "#!";
 
-        var list = document.getElementById("collections");
-        
-        aEntry.appendChild(iEntry);
-        liEntry.appendChild(imgEntry);
-        liEntry.appendChild(spanEntry);
-        liEntry.appendChild(aEntry);
-        list.appendChild(liEntry);
+          //create km
+          var iEntry = document.createElement("i");
+          iEntry.className = "material-icons";
+          iEntry.innerText = element.distancia;
+
+          var list = document.getElementById("collections");
+
+          aEntry.appendChild(iEntry);
+          liEntry.appendChild(imgEntry);
+          liEntry.appendChild(spanEntry);
+          liEntry.appendChild(aEntry);
+          list.appendChild(link);
         });
-        
-        }
-      
+      }
     </script>
     <!-- Modal 2 End  -->
     <script>
